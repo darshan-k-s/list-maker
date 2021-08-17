@@ -1,0 +1,140 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  box-sizing: border-box;
+  color: black;
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  transition-delay: 0.2s;
+  transition-duration: 0.4s;
+  overflow-x: hidden;
+  z-index: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+}
+
+main {
+  height: 75vh;
+  width: 90vw;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main h3 {
+  font-size: 150%;
+}
+
+main .inputField {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+main .inputField input {
+  font-size: 20px;
+  margin: 20px 10px;
+  padding: 2px 6px;
+  border: 5px solid;
+  border-radius: 6px;
+  border-color: #cae1f5;
+  background-color: aliceblue;
+  outline: 0;
+}
+
+main .inputField .btn {
+  font-size: 20px;
+  padding: 5px;
+  width: 60px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  background-color: #0084ff;
+  color: #fff;
+}
+
+main .clearitems {
+  font-size: 15px;
+  font-weight: 500;
+  color: red;
+  border-bottom: 2px solid red;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.msg {
+  margin-bottom: -40px;
+}
+
+.addmsg, .delmsg, .editmsg {
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #9fffc7;
+  padding: 4px 20px;
+  border-radius: 4px;
+  margin-bottom: -20px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.delmsg {
+  background-color: #ff7070;
+  transform: translateY(-21px);
+}
+
+.editmsg {
+  background-color: #67b4fc;
+  transform: translateY(-42px);
+}
+
+.listContainer {
+  overflow: scroll;
+  font-size: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: capitalize;
+  width: 90%;
+}
+
+.listContainer .listitem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aliceblue;
+  padding: 0 10px;
+}
+
+.listContainer .listitem p {
+  font-size: 20px;
+  margin: 5px;
+}
+
+.listContainer .listitem i {
+  padding: 4px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.listContainer .listitem .fa-edit {
+  color: #22b422;
+}
+
+.listContainer .listitem .fa-trash-alt {
+  color: #db0404;
+}
+/*# sourceMappingURL=main.css.map */

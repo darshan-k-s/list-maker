@@ -1,0 +1,126 @@
+@mixin flex($dir: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+body {
+    box-sizing: border-box;
+    color: black;
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    transition-delay: 0.2s;
+    transition-duration: 0.4s;
+    overflow-x: hidden;
+    z-index: 0;
+    height: 100vh;
+    @include flex();
+    background-color: aliceblue;
+}
+
+main{
+    height: 75vh;
+    width: 90vw;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.2);
+    @include flex(column, flex-start, center);
+    h3{
+        font-size: 150%;
+    }
+    .inputField{
+        @include flex();
+        input{
+            font-size: 20px;
+            margin: 20px 10px;
+            padding: 2px 6px;
+            border: 5px solid;
+            border-radius: 6px;
+            border-color: rgb(202, 225, 245);
+            background-color: aliceblue;
+            outline: 0;
+        }
+        .btn{
+            font-size: 20px;
+            padding: 5px;
+            width: 60px;
+            cursor: pointer;
+            border: 0;
+            border-radius: 4px;
+            background-color: rgb(0, 132, 255);
+            color: #fff;
+        }
+    }
+    .clearitems{
+        font-size: 15px;
+        font-weight: 500;
+        color: red;
+        border-bottom: 2px solid red;
+        cursor: pointer;
+        visibility: hidden;
+    }
+}
+
+
+.msg{
+    margin-bottom: -40px;
+}
+
+.addmsg, .delmsg, .editmsg{
+    font-size: 15px;
+    font-weight: 500;
+    background-color: rgb(159, 255, 199);
+    padding: 4px 20px;
+    border-radius: 4px;
+    margin-bottom: -20px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.delmsg{
+    background-color: rgb(255, 112, 112);
+    transform: translateY(-21px);
+}
+.editmsg{
+    background-color: rgb(103, 180, 252);
+    transform: translateY(-42px);
+}
+
+
+.listContainer{
+    overflow: scroll;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    width: 90%;
+    .listitem{
+        @include flex(row, space-between, center);
+        background-color: aliceblue;
+        padding: 0 10px;
+        p{
+            font-size: 20px;
+            margin: 5px;
+        }
+        i{
+            padding: 4px;
+            margin: 0;
+            cursor: pointer;
+        }
+        .fa-edit{
+            color: rgb(34, 180, 34);
+        }
+        .fa-trash-alt{
+            color: rgb(219, 4, 4);
+        }
+    }
+}
+
+
