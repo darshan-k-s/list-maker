@@ -88,6 +88,7 @@ $(".clearitems").click(function (e) {
     $(".listContainer").empty();
     // Flash message
     flash(".delmsg");
+    document.cookie = "";
 });
 
 
